@@ -55,11 +55,16 @@ end
 
 def runner
   welcome
+  # Deal two cards for initial round, store score in total
   total = initial_round
   
-  until initial_round > 21 
+  # Keep asking if user wants to hit if total is under 21, and display the card total
+  until total > 21 
     total = hit?(total)
-    display_card_total
+    display_card_total(total)
   end
+  
+  # If total is > 21 end game
+  end_game
 end
     
