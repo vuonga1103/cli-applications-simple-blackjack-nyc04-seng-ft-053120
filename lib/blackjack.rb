@@ -56,9 +56,9 @@ end
 def runner
   welcome
   current_total = initial_round
-  next_total = hit?
+  next_total = hit?(current_total)
   if next_total == current_total
-    hit?
+    hit?(current_total)
   else display_card_total(next_total)
     if next_total > 20
       end_game
