@@ -25,9 +25,10 @@ def end_game(card_total)
 end
 
 def initial_round
-  card_total = deal_card + deal_card
-  binding.pry
-  display_card_total(card_total)
+  card1 = deal_card
+  card2 = deal_card
+  puts display_card_total(card1 + card2)
+  return card1 + card2
 end
 
 def hit?
