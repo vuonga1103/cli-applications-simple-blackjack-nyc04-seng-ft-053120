@@ -55,7 +55,9 @@ end
 
 def runner
   welcome
-  current_total = initial_round
+  total = initial_round
+  
+  
   next_total = hit?(current_total)
   if next_total == current_total
     hit?(current_total)
