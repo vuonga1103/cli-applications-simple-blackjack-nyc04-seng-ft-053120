@@ -33,21 +33,19 @@ end
 
 def hit?(current_card_total)
   
-  while !user_input
+  prompt_user
+  user_input = get_user_input
+
+  if user_input == 'h'
+    num = deal_card
+    current_card_total += num
+    
+  elsif user_input == 's'
+    current_card_total = current_card_total
+    
+  else
+    invalid_command
     prompt_user
-    user_input = get_user_input
-  
-    if user_input == 'h'
-      num = deal_card
-      current_card_total += num
-      
-    elsif user_input == 's'
-      current_card_total = current_card_total
-      
-    else
-      invalid_command
-      prompt_user
-    end
   end
   
   current_card_total
